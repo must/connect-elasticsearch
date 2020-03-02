@@ -1,5 +1,5 @@
 {
-  "name": "connect-elasticsearch",
+  "name": "connect-pltfrm-elasticsearch",
   "version": "0.0.1",
   "description": "the elasticsearch CONNECT platform package.",
   "main": ".",
