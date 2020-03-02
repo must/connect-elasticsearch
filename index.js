@@ -8,16 +8,21 @@
 module.exports.platform = {
   config: {
     nodes : {
-      native : ['index-node']
+      native : [
+        'index-node',
+        'search'
+      ]
     },
     
     aliases: {
       '/es/index': '/elasticsearch/index',
+      '/es/search': '/elasticsearch/search',
     }
   },
   hints: {
     setup:
-`First, you need an elasticsearch cluster. Then configure accordignly. <a href="https://github.com/elastic/elasticsearch-js">More information</a>.`,
+`First, you need an elasticsearch cluster. Then configure accordignly. <a href="https://github.com/elastic/elasticsearch-js">More information</a>.
+For full documentation of the API refer to <a href="elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html">this link</a>.`,
     sampleConfig: {
       node: 'http://localhost:9200'
     }
