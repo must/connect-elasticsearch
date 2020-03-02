@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "88ee5fe1-a6be-45d8-897d-68dc20f34e39",
+		"name": "connect-elasticsearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"params\": {\n\t\t\"index\": \"profiles\",\n\t    \"body\": {\n\t      \"id\": \"test_id\",\n\t      \"name\": \"LinkedIn\"\n\t    }\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/index",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"params\": {\n\t\t\"index\": \"profiles\",\n\t    \"body\": {\n\t      \"query\": {\n\t        \"multi_match\": {\n\t        \t\"fields\":  [ \"*name\" ],\n\t        \t\n\t        \t\"query\":  \"Linkedis\",\n\t        \t\"fuzziness\": 3,\n\t        \t\"minimum_should_match\": \"5%\"\n\t        }\n\t      }\n\t    }\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
