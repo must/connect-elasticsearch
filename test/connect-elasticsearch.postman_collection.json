@@ -19,7 +19,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"params\": {\n\t\t\"index\": \"profiles\",\n\t    \"body\": {\n\t      \"id\": \"test_id\",\n\t      \"name\": \"LinkedIn\"\n\t    }\n\t}\n}",
+					"raw": "{\n\t\"params\": {\n\t\t\"index\": \"profiles\",\n\t\t\"id\": \"test_id\",\n\t    \"body\": {\n\t      \"name\": \"LinkedIn\"\n\t    }\n\t}\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -33,6 +33,106 @@
 					],
 					"path": [
 						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"params\": {\n\t\t\"index\": \"profiles\",\n\t\t\"id\": \"test_id\",\n\t    \"body\": {\n\t    \t\"doc\": {\n\t\t\t\t\"name\": \"links\"\n\t    \t}\n\t    }\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/update",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"params\": {\n\t\t\"index\": \"profiles\",\n\t\t\"id\": \"test_id\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/delete",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "indicies/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"params\": {\n\t\t\"index\": \"profiles\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/indicies/delete",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"indicies",
+						"delete"
 					]
 				}
 			},
