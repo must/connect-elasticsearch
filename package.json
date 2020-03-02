@@ -23,5 +23,8 @@
   "devDependencies": {
     "connect-platform": "^0.2.17",
     "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.6.0"
   }
 }
