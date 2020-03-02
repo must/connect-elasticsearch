@@ -12,7 +12,8 @@ module.exports.platform = {
         'index-node',
         'search',
         'delete',
-        'indices/delete'
+        'indices/delete',
+        'update'
       ]
     },
     
@@ -21,6 +22,7 @@ module.exports.platform = {
       '/es/search': '/elasticsearch/search',
       '/es/delete': '/elasticsearch/delete',
       '/es/indices/delete': '/elasticsearch/indices/delete',
+      '/es/update': '/elasticsearch/update',
     }
   },
   hints: {
