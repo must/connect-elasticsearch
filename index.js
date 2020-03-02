@@ -10,13 +10,17 @@ module.exports.platform = {
     nodes : {
       native : [
         'index-node',
-        'search'
+        'search',
+        'delete',
+        'indices/delete'
       ]
     },
     
     aliases: {
       '/es/index': '/elasticsearch/index',
       '/es/search': '/elasticsearch/search',
+      '/es/delete': '/elasticsearch/delete',
+      '/es/indices/delete': '/elasticsearch/indices/delete',
     }
   },
   hints: {
